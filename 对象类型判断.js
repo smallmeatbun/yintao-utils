@@ -11,6 +11,7 @@ export default {
     isNull: o => Object.prototype.toString.call(o) === '[object Null]',
     isUndefined: o => Object.prototype.toString.call(o) === '[object Undefined]',
     isObject: o => Object.prototype.toString.call(o) === '[object Object]',
+    objNotEmpty: o => Object.prototype.toString.call(o) === '[object Object]' && Object.keys(o).length > 0,
     isArray: o => Object.prototype.toString.call(o) === '[object Array]',
     //判断是否为非空数组
     isNotEmpty: arr => Object.prototype.toString.call(arr).slice(8, -1) === 'Array' && arr.length > 0,
